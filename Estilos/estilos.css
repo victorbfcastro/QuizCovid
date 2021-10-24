@@ -4,6 +4,22 @@ body{
     color: white;
 }
 
+footer{
+    margin-top: 7%;
+    text-align: center;
+}
+
+#sectionIndex{
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
+}
+
 #divBotao{
     text-align: center;
 }
@@ -20,16 +36,18 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
     line-height: 80px;
 }
+
 #btIniciar{
     font:normal 20pt Arial;
     margin-top: 50px;
-    text-align: center;
-    margin: auto;
-    width: 200px;
+    text-align: center;   
+    width: 180px;
+    height: 50px;
     background-color: rgb(136, 3, 3);
     color: white;
     border-radius: 5px;
     border: 2px solid rgb(107, 4, 4);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
     transition-duration: 0.4s ;
 }
 #btIniciar:hover{
