@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+    font: normal 15pt Arial;
+    color: white;
+    text-align: center;
+}
+section{
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
+}
+#divTitulo{
+    color: white;
+    background-color: rgb(107, 4, 4);
+    border-radius: 15px;
+    width: 500px;
+    height:80px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
+    line-height: 80px;
+}
+#btIniciar{
+    font:normal 20pt Arial;
+    margin-top: 50px;
+    width: 200px;
+    background-color: rgb(136, 3, 3);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(107, 4, 4);
+    transition-duration: 0.4s ;
+}
+#btIniciar:hover{
+    background-color: rgb(71, 9, 9);
+    color: white;
+}
