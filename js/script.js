@@ -4,7 +4,7 @@ var opcao2 = document.getElementById("lbl2")
 var opcao3 = document.getElementById("lbl3")
 var opcao4 = document.getElementById("lbl4")
 var resp = document.getElementById("resp")
-
+var pontuacao = 0
 var rodada = 0
 
 var lista = [
@@ -54,42 +54,84 @@ function carregarPergunta()
 
 function proximo()
 {
-    var escolhido = Number(document.querySelector('input[name="opc"]:checked').value);
-    var cor = ''
-
-    if (escolhido == lista[rodada].resp)
+    if (rodada == 10)
     {
-        resp.innerHTML = "Resposta Correta!"
-        cor = "green"
+        finalizar()
     }
     else
     {
-        resp.innerHTML = `Errou! A resposta certa é: ${lista[rodada].opc[lista[rodada].resp - 1]}`
-        cor = "red"
+        var escolhido = Number(document.querySelector('input[name="opc"]:checked').value);
+        var corResposta = "rgb(83, 197, 79)"
+
+        if (escolhido == lista[rodada].resp)
+        {
+            pontuacao += 1
+            resp.style.background = "rgb(83, 197, 79)"
+            resp.style.color = "black"
+            resp.innerHTML = "Resposta Correta!"
+        }
+        else
+        {
+            resp.style.background = "rgb(148, 42, 42)"
+            resp.style.color = "white"
+            resp.innerHTML = `Errou! A resposta certa é: ${lista[rodada].opc[lista[rodada].resp - 1]}`
+        }
+
+        switch (lista[rodada].resp)
+        {
+            case 1:
+                opcao1.style.background = corResposta
+                break
+            case 2:
+                opcao2.style.background = corResposta
+                break
+            case 3:
+                opcao3.style.background = corResposta
+                break
+            case 4:
+                opcao4.style.background = corResposta
+                break
+        }
+
+        rodada += 1
+
+        sleep(2000).then(() =>
+        {
+            carregarPergunta()
+        })
+    }
+}
+
+function finalizar()
+{
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+
+    modal.style.display = "block";
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function ()
+    {
+        modal.style.display = "none";
     }
 
-    switch (lista[rodada].resp)
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event)
     {
-        case 1:
-            opcao1.style.background = cor
-            break
-        case 2:
-            opcao2.style.background = cor
-            break
-        case 3:
-            opcao3.style.background = cor
-            break
-        case 4:
-            opcao4.style.background = cor
-            break
+        if (event.target == modal)
+        {
+            modal.style.display = "none";
+        }
     }
-
-    rodada += 1
-
-    sleep(1500).then(() =>
-    {
-        carregarPergunta()
-    })
 }
 
 function sleep(time)
