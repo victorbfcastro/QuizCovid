@@ -29,6 +29,7 @@ function carregarPergunta()
     opcao2.style.background = "white"
     opcao3.style.background = "white"
     opcao4.style.background = "white"
+    resp.style.background = "white"
     resp.innerHTML = ''
 
     for (var j = 0; j <= 3; j++)
@@ -66,8 +67,8 @@ function proximo()
         if (escolhido == lista[rodada].resp)
         {
             pontuacao += 1
-            resp.style.background = "rgb(83, 197, 79)"
-            resp.style.color = "black"
+            resp.style.background = "rgb(3, 82, 26)"
+            resp.style.color = "white"
             resp.innerHTML = "Resposta Correta!"
         }
         else
@@ -81,15 +82,19 @@ function proximo()
         {
             case 1:
                 opcao1.style.background = corResposta
+                opcao1.style.borderRadius = "3px" 
                 break
             case 2:
                 opcao2.style.background = corResposta
+                opcao1.style.borderRadius = "3px"
                 break
             case 3:
                 opcao3.style.background = corResposta
+                opcao1.style.borderRadius = "3px"
                 break
             case 4:
                 opcao4.style.background = corResposta
+                opcao1.style.borderRadius = "3px"
                 break
         }
 

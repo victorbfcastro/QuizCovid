@@ -3,26 +3,10 @@ body{
     font: normal 15pt Arial;
     color: white;
 }
-section{
-    color: black;
-    background-color: white;
-    border-radius: 15px;
-    padding: 15px;
-    width: 400px;
+
+#divBotao{
     text-align: center;
-    margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
 }
-
-label{
-    padding:5px;
-    color:#222;
-    font-family:corbel,sans-serif;
-    font-size: 16px;
-    vertical-align: middle;
-}
-
-input{display:table-cell;vertical-align:middle}
 
 #divTitulo{
     color: white;
@@ -39,6 +23,8 @@ input{display:table-cell;vertical-align:middle}
 #btIniciar{
     font:normal 20pt Arial;
     margin-top: 50px;
+    text-align: center;
+    margin: auto;
     width: 200px;
     background-color: rgb(136, 3, 3);
     color: white;
@@ -54,16 +40,27 @@ input{display:table-cell;vertical-align:middle}
 #btProximo{
     font:normal 16pt Arial;
     margin-top: 50px;
+    margin-bottom: 20px;
     width: 100px;
+    height: 50px;
     background-color: rgb(136, 3, 3);
     color: white;
     border-radius: 5px;
-    border: 2px solid rgb(107, 4, 4);
+    border: 2px solid rgb(71, 9, 9);
+    text-align: center;
     transition-duration: 0.4s ;
 }
 #btProximo:hover{
     background-color: rgb(71, 9, 9);
     color: white;
+}
+
+#resp{
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top:30px;
+    line-height: 30px;
 }
 
 #sectionQuiz{
@@ -72,6 +69,7 @@ input{display:table-cell;vertical-align:middle}
     border-radius: 15px;
     padding: 15px;
     width: 800px;
+    margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
 }
 
@@ -86,6 +84,11 @@ input{display:table-cell;vertical-align:middle}
     margin-bottom: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.52);
     line-height: 80px;
+}
+
+#divRespostas{
+    vertical-align: top;
+    display: inline-block;
 }
 
 /* The Modal (background) */
