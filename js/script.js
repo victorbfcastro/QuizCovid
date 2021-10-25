@@ -8,8 +8,8 @@ var pontuacao = 0
 var rodada = 0
 
 var lista = [
-    {
-        p: "Onde covid-19 começou?",
+    {    
+        p: "Onde a Covid-19 começou?",
         opc: ["Japão", "China", "Brasil", "Argentina"],
         resp: 2
     },
@@ -18,7 +18,55 @@ var lista = [
         p: "Como é feita a transmissão?",
         opc: ["Através de contato pessoal e superfícies que entraram em contato com o vírus", "Através de uma ligação telefônica", "Através de pensamentos", "Nenhuma das opções anteriores"],
         resp: 1
-    }
+    },
+
+    {
+        p: "Que ações foram tomadas por países ao redor do mundo para conter o vírus?",
+        opc: ["Comprar papel higiênico","Instalar ventiladores de teto","Lockdown e o uso de máscaras","Aumentar o preço do frango"],
+        resp: 3
+    },
+
+    {
+        p: "Qual grupo de maior de risco quando afetado pela Covid-19?",
+        opc: ["Crianças e adolescentes","Idosos e aqueles com problemas respiratórios","Animais","Plantas"],
+        resp: 2
+    },
+
+    {
+        p: "Quais sintomas mais comuns naqueles que possuem a Covid-19?",
+        opc: ["Perda de cabelo","Desequilíbrio e coceiras","Perda de visão","Perda do paladar e febre"],
+        resp: 4
+    },
+
+    {
+        p: "Quais partes do rosto devem ser protegidas quando utilizando a máscara?",
+        opc: ["A boca e o nariz","Dentes e língua","Cabelo","Orelhas"],
+        resp: 1
+    },
+
+    {
+        p: "O que se deve passar para se manter protegido da Covid?",
+        opc: ["Leite com açúcar","Limão","Água com sal","Álcool em gel"],
+        resp: 4
+    },
+
+    {
+        p: "Qual parte do corpo é mais atacada pelo Covid-19?",
+        opc: ["Dedos dos pés","Dedos das mãos","Pulmões e coração","Ossos do corpo"],
+        resp: 3
+    },
+
+    {    
+        p: " Quais ações são recomendadas para aqueles que tem o vírus?",
+        opc: ["Ir para festas","Se isolar de outras pessoas e buscar ajuda médica","Nadar na piscina","Rolar na grama"],
+        resp: 2
+    },
+
+    {    
+        p: "Que espaços devem ser evitados para não aumentar seu risco de contaminação?",
+        opc: ["Parques","Perfumarias","Áreas fechadas com muitas pessoas","Lugares úmidos"],
+        resp: 3
+    },
 ]
 
 function carregarPergunta()
@@ -100,7 +148,7 @@ function proximo()
 
         rodada += 1
 
-        sleep(2000).then(() =>
+        sleep(1000).then(() =>
         {
             carregarPergunta()
         })
