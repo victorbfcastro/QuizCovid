@@ -74,7 +74,7 @@ function carregarPergunta()
 {
     botaoProximo.disabled = false;
     caixaPerguntas.innerHTML = lista[rodada].p
-
+    var radioButton = document.getElementById("opc1").checked = true
     opcao1.style.background = "white"
     opcao2.style.background = "white"
     opcao3.style.background = "white"
@@ -190,14 +190,15 @@ function finalizar()
     }
 
     var msgResultado = document.getElementById("msgResultado")
-    msgResultado.style.color = "black"
-    msgResultado.innerHTML = `Você acertou ${pontuacao} de 10 perguntas.`
+    var msgPorcentagem = document.getElementById("msgPorcentagem")
     var msgParabens = document.getElementById("msgParabens")
-    if(pontuacao > 7){
-        msgParabens.style.color = "black"
+
+    msgResultado.innerHTML = `Você acertou ${pontuacao} de 10 perguntas.`
+    msgPorcentagem.innerHTML = `${(pontuacao/10)*100}%`
+
+    if(pontuacao >= 7){
         msgParabens.innerHTML = "Parabéns!"
     }else{
-        msgParabens.style.color = "black"
         msgParabens.innerHTML = "Que pena.."
     }
 
