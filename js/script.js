@@ -130,19 +130,20 @@ function proximo()
             break
         case 2:
             opcao2.style.background = corResposta
-            opcao1.style.borderRadius = "3px"
+            opcao2.style.borderRadius = "3px"
             break
         case 3:
             opcao3.style.background = corResposta
-            opcao1.style.borderRadius = "3px"
+            opcao3.style.borderRadius = "3px"
             break
         case 4:
             opcao4.style.background = corResposta
-            opcao1.style.borderRadius = "3px"
+            opcao4.style.borderRadius = "3px"
             break
     }
 
     rodada += 1
+
     botaoProximo.disabled = true;
     if (rodada < 10)
     {
@@ -162,21 +163,29 @@ function finalizar()
 {
     var modal = document.getElementById("myModal");
 
-    // Get the <span> element that closes the modal
+    // Pegar icone de x para fechar
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
-    // When the user clicks on <span> (x), close the modal
+    
+    span.disabled = true;
+
+    sleep(2500).then(() =>{
+        span.disabled = false;
+    })
+    //Fechar modal ao clicar no x
     span.onclick = function ()
     {
         modal.style.display = "none";
+        window.location.href='index.html'
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    //Fechar modal se clicar fora do quadro
     window.onclick = function (event)
     {
         if (event.target == modal)
         {
             modal.style.display = "none";
+            window.location.href='index.html'
         }
     }
 
